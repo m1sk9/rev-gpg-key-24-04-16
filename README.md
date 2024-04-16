@@ -16,28 +16,28 @@ Key fingerprint = CDD5837D99D6BC1D6F5F5CB2002AEC385BEAEBCF
 And the new key is:
 
 ```
-pub   ed25519/EBC117E695D61E14 2024-04-16 [expires: never]
-Key fingerprint = 435DE94C0A39980236E20A44EBC117E695D61E14
+pub   ed25519/198F1B4D8D77678F 2024-04-16 [expires: never]
+Key fingerprint = ABB3904C7263155D9F5C34A3198F1B4D8D77678F
 ```
 
 To fetch the full key from a public key server, you can simply do:
 
 ```
-gpg --keyserver keys.openpgp.org --recv-key '435DE94C0A39980236E20A44EBC117E695D61E14'
+gpg --keyserver keys.openpgp.org --recv-key 'ABB3904C7263155D9F5C34A3198F1B4D8D77678F'
 ```
 
 If you already know my old key, you can now verify that the new key is
 signed by the old one:
 
 ```
-gpg --check-sigs '435DE94C0A39980236E20A44EBC117E695D61E14'
+gpg --check-sigs 'ABB3904C7263155D9F5C34A3198F1B4D8D77678F'
 ```
 
 If you don't already know my old key, or you just want to be double
 extra paranoid, you can check the fingerprint against the one above:
 
 ```
-gpg --fingerprint '435DE94C0A39980236E20A44EBC117E695D61E14'
+gpg --fingerprint 'ABB3904C7263155D9F5C34A3198F1B4D8D77678F'
 ```
 
 If you are satisfied that you've got the right key, and the UIDs match
@@ -52,7 +52,7 @@ keyserver
 **
 
 ```
-gpg --sign-key '435DE94C0A39980236E20A44EBC117E695D61E14'
+gpg --sign-key 'ABB3904C7263155D9F5C34A3198F1B4D8D77678F'
 ```
 
 I'd like to receive your signatures on my key. You can either send me
@@ -60,7 +60,7 @@ an e-mail with the new signatures (if you have a functional MTA on
 your system):
 
 ```
-gpg --export '435DE94C0A39980236E20A44EBC117E695D61E14' | gpg --encrypt -r '435DE94C0A39980236E20A44EBC117E695D61E14' --armor | mail -s 'OpenPGP Signatures' <me@m1sk9.dev>
+gpg --export 'ABB3904C7263155D9F5C34A3198F1B4D8D77678F' | gpg --encrypt -r 'ABB3904C7263155D9F5C34A3198F1B4D8D77678F' --armor | mail -s 'OpenPGP Signatures' <me@m1sk9.dev>
 ```
 
 Please let me know if you have any questions, or problems, and sorry
